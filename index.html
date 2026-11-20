@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Albaranes · Unho fontanería</title>
+<meta name="description" content="Albaranes de trabajo para fontaneros: rápidos, firmados y por WhatsApp.">
+<meta name="theme-color" content="#1f6fb8">
+<link rel="icon" href="albaranes/icono.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&family=Manrope:wght@500;600;700;800&display=swap">
+<style>
+  :root { --canvas:#f3f1ec; --surface:#fff; --ink:#1c1b19; --muted:#66625b; --line:#e6e2d9; --app:#1f6fb8; --brand:#2ea162; }
+  @media (prefers-color-scheme: dark) { :root { --canvas:#111210; --surface:#1b1c1a; --ink:#eeebe5; --muted:#9c968d; --line:#2e2f2b; } }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100dvh; font-family:Manrope, system-ui, sans-serif; color:var(--ink);
+    background: radial-gradient(900px 420px at 88% -12%, color-mix(in srgb, var(--app) 22%, transparent), transparent 62%),
+      radial-gradient(700px 380px at -5% 105%, color-mix(in srgb, var(--brand) 14%, transparent), transparent 60%), var(--canvas); }
+  main { max-width: 560px; margin: 0 auto; padding: max(24px, env(safe-area-inset-top)) 20px 40px; display:flex; flex-direction:column; gap:22px; }
+  .marca { display:inline-flex; flex-direction:column; gap:3px; width:96px; }
+  .marca span { font-family:"Averia Serif Libre", Georgia, serif; font-weight:700; font-size:18.5px; line-height:1; color:var(--app); white-space:nowrap; }
+  .cabeza { display:flex; align-items:center; gap:16px; }
+  h1 { font-family:"Averia Serif Libre", Georgia, serif; font-size:34px; line-height:1.05; margin:0; }
+  p { margin:0; line-height:1.55; }
+  .muted { color:var(--muted); }
+  .boton { display:flex; align-items:center; justify-content:center; gap:10px; min-height:58px; border-radius:999px; font-weight:800; font-size:17px; text-decoration:none; }
+  .primario { background:var(--ink); color:var(--canvas); }
+  .secundario { border:1px solid var(--line); background:var(--surface); color:var(--ink); }
+  .tarjeta { background: color-mix(in srgb, var(--surface) 80%, transparent); border:1px solid var(--line); border-radius:18px; padding:18px; display:flex; flex-direction:column; gap:10px; }
+  ol { margin:0; padding-left:20px; display:flex; flex-direction:column; gap:6px; line-height:1.5; }
+  h2 { font-size:16px; margin:0; font-weight:800; }
+  ul.puntos { margin:0; padding:0; list-style:none; display:grid; gap:8px; }
+  ul.puntos li { display:flex; gap:10px; align-items:flex-start; line-height:1.45; }
+  ul.puntos li::before { content:""; flex:none; width:8px; height:8px; margin-top:7px; border-radius:99px; background:var(--app); }
+  footer { font-size:13px; color:var(--muted); text-align:center; }
+</style>
+</head>
+<body>
+<main>
+  <span class="marca" role="img" aria-label="Unho fontanería">
+    <svg viewBox="0 -27 232 90" width="96" height="37" aria-hidden="true"><defs><filter id="b" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="10"/></filter><mask id="m" maskUnits="userSpaceOnUse" x="150" y="-20" width="100" height="100"><circle cx="199" cy="31" r="31.5" fill="#fff"/><circle cx="199" cy="31" r="14" fill="#000"/></mask></defs><path d="M8.5 0V35.25A18.25 18.25 0 0 0 45 35.25M45 0V62M45 26.75A18.25 18.25 0 0 1 81.5 26.75V62M112.5 -26V62M112.5 26.75A18.25 18.25 0 0 1 149 26.75V62" fill="none" stroke="currentColor" stroke-width="17"/><g mask="url(#m)"><rect x="160" y="-8" width="78" height="78" fill="#2EA162"/><g filter="url(#b)"><circle cx="221" cy="7" r="22" fill="#2548A1"/><circle cx="175" cy="55" r="20" fill="#C25DAF"/><circle cx="221" cy="57" r="17" fill="#F2B33D"/></g></g></svg>
+    <span>fontanería</span>
+  </span>
+
+  <div class="cabeza">
+    <img src="albaranes/icono-192.png" alt="" width="72" height="72" style="border-radius:18px">
+    <div>
+      <h1>Albaranes</h1>
+      <p class="muted">Para fontaneros. Rápido, firmado y por WhatsApp.</p>
+    </div>
+  </div>
+
+  <a class="boton primario" href="https://github.com/unho-hq/unho-hq.github.io/releases/download/android/albaranes.apk">Descargar para Android</a>
+  <a class="boton secundario" href="albaranes/">Abrir en el navegador</a>
+
+  <section class="tarjeta">
+    <h2>Instalar el APK</h2>
+    <ol>
+      <li>Pulsa «Descargar para Android».</li>
+      <li>Abre el archivo descargado (albaranes.apk).</li>
+      <li>Si el móvil lo pide, permite «instalar apps de esta fuente».</li>
+      <li>Pulsa «Instalar» y ábrela desde el escritorio.</li>
+    </ol>
+    <p class="muted">También sirve abrirla en Chrome y tocar ⋮ › «Instalar aplicación».</p>
+  </section>
+
+  <section class="tarjeta">
+    <h2>Qué hace</h2>
+    <ul class="puntos">
+      <li>Tu equipo y tu numeración de siempre ya puestos: solo eliges cliente, tiempo y material.</li>
+      <li>Escribe el material como siempre («16 cd pb 15-1/2») y lo entiende solo.</li>
+      <li>Firma del cliente en la pantalla y PDF directo a WhatsApp.</li>
+      <li>Funciona sin cobertura. Tus datos se quedan en tu móvil.</li>
+    </ul>
+  </section>
+
+  <footer>Hecho con Unho</footer>
+</main>
+</body>
+</html>

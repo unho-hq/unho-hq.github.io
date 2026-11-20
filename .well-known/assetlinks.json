@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "es.unho.albaranes",
+      "sha256_cert_fingerprints": ["E7:0F:51:A8:A2:F2:20:8A:76:E2:33:F4:A2:DE:B6:44:71:6A:55:12:B8:53:D3:88:B3:A8:7E:5D:65:01:97:A9"]
+    }
+  }
+]

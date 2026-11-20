@@ -1,0 +1,55 @@
+plugins {
+    id "com.android.application"
+}
+
+// Albaranes for Android: a Trusted Web Activity. The app is the PWA at APP_URL, opened full screen
+// by Chrome (offline, share to WhatsApp, voice and the on-device AI all work the same).
+def appUrl = "https://unho-hq.github.io/albaranes/"
+
+android {
+    namespace "es.unho.albaranes"
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "es.unho.albaranes"
+        minSdk 21
+        targetSdk 35
+        versionCode Integer.parseInt(System.getenv("VERSION_CODE") ?: "1")
+        versionName System.getenv("VERSION_NAME") ?: "0.1.0"
+
+        manifestPlaceholders = [
+            hostName: "unho-hq.github.io",
+            defaultUrl: appUrl,
+            launcherName: "Albaranes",
+        ]
+        resValue "string", "app_name", "Albaranes"
+        resValue "string", "asset_statements",
+            '[{ "relation": ["delegate_permission/common.handle_all_urls"], "target": { "namespace": "web", "site": "https://unho-hq.github.io" } }]'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(System.getenv("FIRMA_ARCHIVO") ?: "firma.p12")
+            storeType "pkcs12"
+            storePassword System.getenv("FIRMA_CLAVE")
+            keyAlias "albaranes"
+            keyPassword System.getenv("FIRMA_CLAVE")
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation "com.google.androidbrowserhelper:androidbrowserhelper:2.5.0"
+}

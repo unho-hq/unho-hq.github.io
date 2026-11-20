@@ -1,0 +1,4 @@
+android/app/build/
+android/.gradle/
+android/app/firma.p12
+*.p12
